@@ -1,0 +1,37 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+ 
+<h1 style="text-align:center">Sales List</h1>
+<div style="text-align:center; margin-top: 100px;margin:50px">
+    <table class="table table-striped table-dark" style="margin: 0 auto;">
+        <thead>
+            <tr>
+                <th scope="col">Product ID</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Product Weight</th>
+                <th scope="col">Product Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="lst: ${sale}">
+                <th scope="row" th:text="${lst.productId}"></th>
+                <td th:text="${lst.productName}"></td>
+                <td th:text="${lst.productWeight}"></td>
+                <td th:text="${lst.productPrice}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

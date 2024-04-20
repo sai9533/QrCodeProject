@@ -1,0 +1,26 @@
+<html xmlns:th="https://thymeleaf.org">
+<head>
+</head>
+<body>
+<h1>welcome</h1>
+  <table border="3">
+<!--  <tr th:each="lst:${data}">
+<td th:text="${lst.productName}"></td>
+<td th:text="${lst.productPrice}"></td>-->
+ <div th:each="lst : ${data}">
+<p th:text="${lst.productName}"></p>
+ <img th:src="'data:image/png;base64,' + ${lst.qrImg}" width="50" height="50"  alt="QR Code">
+ </div>
+<!--   <h1>QR Code Images</h1>
+    <div th:each="imageData : ${imageDataList}">
+        <img th:src="'data:image/png;base64,' + ${imageData}" width="50" height="50"alt="QR Code">
+    </div>
+    <div th:each="imageData : ${proImg}">
+        <img th:src="'data:image/png;base64,' + ${imageData}" width="50" height="50"alt="QR Code">
+    </div> --> 
+
+    
+</tr>
+</table>
+</body>
+</html>
